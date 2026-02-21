@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { CartProvider } from './context/CartContext';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -68,6 +69,7 @@ const App = () => {
   return (
     <CartProvider>
       <AppContent />
+      <Analytics />
     </CartProvider>
   );
 };
